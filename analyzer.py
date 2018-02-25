@@ -55,14 +55,10 @@ class Analy:
             self.txtdecoder.append(wdlist[i].strip(",.?!#$:-;*\'\"[]{}()/"))
 
         #Generate word dictionary counted word numbers
-        for k in wdlist:
-            try:
-                self.result[k] += 1
-            except:
-                self.result[k] = 1
+        self.result = collections.Counter(wdlist)
 
         #Collect top 5 values
-        resultchart = dict(collections.Counter(self.result).most_common(5))
+        resultchart = dict(self.result.most_common(5))
         maxval = int(max(resultchart.values()))
 
         #Based on the most top value, the remaining 4 values are explained as a ratio divided by 1st value.
