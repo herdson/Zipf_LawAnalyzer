@@ -1,2 +1,10 @@
-# Zipf_LawAnalyzer
-This repository provide tool of Zipf's Law
+Zipf's Law analyzer
+===================
+
+Introduce
+---------
+This is a tool that helps us analyze the laws of the Zipf.
+
+
+How to use?
+-----------
